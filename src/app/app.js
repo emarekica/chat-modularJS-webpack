@@ -1,39 +1,32 @@
-// import { connection } from "./connection.js";
-// // import { msgCreation } from "./message.creation.js";
-// // import { DOM } from "./message.creation.js";
+// CONNECTION
 
-// // const messageCreation = new msgCreation(DOM);
+import {
+  closeConnection,
+  openConnection,
+  updateMembersDOM,
+} from "./app/connection";
 
-// export const run = function () {
-//   connection();
-//   messageCreation();
-// };
+// MSG
+import {
+  sendMessage,
+  createMessageElement,
+  addMessageToListDOM,
+  msgHandlers,
+  sendMessage,
+  createMessageElement,
+  msgHandlers,
+} from "./app/message.creation";
 
-/* 
+class ChatComponents {
+  loadChatComponents() {
+    const openConnection = new openConnection();
+    const closeConnection = new closeConnection();
+    const updateMembersDOM = new updateMembersDOM();
 
-// import components that are in the same folder as app
+    const sendMessage = new sendMessage();
+    const createMessageElement = new createMessageElement();
+    const msgHandlers = new msgHandlers();
+  }
+}
 
-import { inputsAreValid } from "./utils/inputs-are-valid";
-import { parseInputs } from "./utils/parse-inputs";
-
-export const run = (alertService, componentService) => {
-  alertService.hideErrors();
-
-  componentService.onClick(() => {
-    alertService.hideErrors();
-
-    const inputs = componentService.getInputs();
-    const parsedInputs = parseInputs(...inputs);
-
-    if (inputsAreValid(...parsedInputs)) {
-      const [numA, numB] = parsedInputs;
-
-      componentService.setResult(numA + numB);
-    } else {
-      componentService.setResult("");
-      alertService.handleAdditionError(inputs, parsedInputs);
-    }
-  });
-};
-
-*/
+export { ChatComponents };
