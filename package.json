@@ -1,0 +1,18 @@
+{
+  "name": "seminarski-webpack",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Algebra chat with SASS and Webpack",
+  "main": "wall-chat.js",
+  "scripts": {
+    "start": "webpack",
+    "compile:sass": "node-sass sass/wall-chat.scss wall-chat.css -w"
+  },
+  "author": "emarekica",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
