@@ -8,7 +8,7 @@ export const DOM = {
   form: document.querySelector(".messageForm"),
 };
 
-const input = DOM.input;
+export const input = DOM.input;
 
 //
 
@@ -84,18 +84,21 @@ export function addMessageToListDOM(text, member) {
   }
 }
 
-updateMembersDOM();
 //
 
 // ------------ EVENT LISTENERS
 
-// Sending messages
-DOM.form.addEventListener("submit", sendMessage);
+export const msgHandlers = function () {
+  // Sending messages
+  DOM.form.addEventListener("submit", sendMessage);
 
-// Msg max length reached
-input.addEventListener("keydown", function () {
-  if (this.value.length >= 500) {
-    modalError.classList.add("open");
-    modalError.textContent = "You have exceeded the maximum message length.";
-  }
-});
+  // Msg max length reached
+  input.addEventListener("keydown", function () {
+    if (this.value.length >= 500) {
+      modalError.classList.add("open");
+      modalError.textContent = "You have exceeded the maximum message length.";
+    }
+  });
+};
+
+updateMembersDOM();

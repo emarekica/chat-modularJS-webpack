@@ -22,7 +22,7 @@ const modalError = document.querySelector(".modal-error");
 // ------------ OPEN CONNECTION
 
 // A connection has been opened
-drone.on("open", (error) => {
+export const openConnection = drone.on("open", (error) => {
   if (error) {
     modalError.classList.add("open");
     modalError.textContent =
@@ -74,7 +74,7 @@ drone.on("open", (error) => {
 
 // ------------ CLOSE CONNECTION
 
-drone.on("close", (event) => {
+export const closeConnection = drone.on("close", (event) => {
   console.log("Connection was closed", event);
 });
 

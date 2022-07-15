@@ -1,6 +1,7 @@
 {
   "name": "seminarski-webpack",
   "version": "1.0.0",
+  "mode": "development",
   "private": true,
   "description": "Algebra chat with SASS and Webpack",
   "main": "wall-chat.js",

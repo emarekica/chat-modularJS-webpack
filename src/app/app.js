@@ -1,32 +1,49 @@
 // CONNECTION
 
 import {
-  closeConnection,
   openConnection,
+  closeConnection,
   updateMembersDOM,
-} from "./app/connection";
+} from "connection.js";
 
 // MSG
 import {
+  createMessageElement,
   sendMessage,
   createMessageElement,
   addMessageToListDOM,
   msgHandlers,
+} from "./message.creation.js";
+
+export {
+  openConnection,
+  closeConnection,
+  updateMembersDOM,
   sendMessage,
   createMessageElement,
+  addMessageToListDOM,
   msgHandlers,
-} from "./app/message.creation";
+};
 
-class ChatComponents {
-  loadChatComponents() {
-    const openConnection = new openConnection();
-    const closeConnection = new closeConnection();
-    const updateMembersDOM = new updateMembersDOM();
+/* import { bestFruits } from "./preferences.js";
+import { multiply } from "./calculation.js";
+import aboutMe from "./bio.js";
 
-    const sendMessage = new sendMessage();
-    const createMessageElement = new createMessageElement();
-    const msgHandlers = new msgHandlers();
-  }
-}
+export { bestFruits, multiply, aboutMe }; */
 
-export { ChatComponents };
+// const loadChatComponents = function () {
+//   const openConnection = new openConnection();
+//   const closeConnection = new closeConnection();
+//   const updateMembersDOM = new updateMembersDOM();
+
+//   const sendMessage = new sendMessage();
+//   const createMessageElement = new createMessageElement();
+//   const addMessageToListDOM = new addMessageToListDOM();
+//   const msgHandlers = new msgHandlers();
+// };
+
+// class ChatComponents {
+//   loadChatComponents;
+// }
+
+// export { ChatComponents };
