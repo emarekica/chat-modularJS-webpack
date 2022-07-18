@@ -1,35 +1,30 @@
-import { updateMembersDOM } from "./connection.js";
-import { drone } from "./connection.js";
+import { updateMembersDOM } from "./members.js";
+import drone from "../helpers/client.js";
 
-export const DOM = {
-  members: document.querySelector(".members"),
-  messages: document.querySelector(".messages"),
-  input: document.querySelector(".messageFormInput"),
-  form: document.querySelector(".messageForm"),
-};
+import DOM from "./domEnum.js";
 
-export const input = DOM.input;
+export const input = DOM.INPUT;
 
 //
 
 // ------------ FUNCTIONS
 
-export function sendMessage() {
-  const value = DOM.input.value;
+function sendMessage() {
+  const value = DOM.INPUT.value;
   // console.log(value);
 
   if (value === "") {
     return;
   }
 
-  DOM.input.value = "";
+  DOM.INPUT.value = "";
   drone.publish({
     room: "observable-room",
     message: value,
   });
 }
 
-export function createMessageElement(text, member) {
+function createMessageElement(text, member) {
   // --- Separate messages from other users and "me"
   const clientID = drone.clientId;
   const messageFromMe = member.id === clientID;
@@ -74,8 +69,8 @@ export function createMessageElement(text, member) {
 }
 
 // add msg to chat window
-export function addMessageToListDOM(text, member) {
-  const element = DOM.messages;
+function addMessageToListDOM(text, member) {
+  const element = DOM.MESSAGE;
   const wasTop =
     element.scrollTop === element.scrollHeight - element.clientHeight;
   element.appendChild(createMessageElement(text, member));
@@ -90,7 +85,7 @@ export function addMessageToListDOM(text, member) {
 
 export const msgHandlers = function () {
   // Sending messages
-  DOM.form.addEventListener("submit", sendMessage);
+  DOM.FORM.addEventListener("submit", sendMessage);
 
   // Msg max length reached
   input.addEventListener("keydown", function () {
@@ -102,3 +97,7 @@ export const msgHandlers = function () {
 };
 
 updateMembersDOM();
+
+//
+
+export { addMessageToListDOM };
