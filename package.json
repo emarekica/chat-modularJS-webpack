@@ -4,12 +4,10 @@
   "mode": "development",
   "private": true,
   "description": "Algebra chat with SASS and Webpack",
-  "main": "wall-chat.js",
+  "main": "index.js",
   "scripts": {
     "start": "webpack",
-    "start-dev": "source dev.env; node server.js",
-    "start-prod": "source prod.env; node server.js",
-    "compile:sass": "node-sass sass/wall-chat.scss wall-chat.css -w"
+    "compile:sass": "node-sass css/wall-chat.scss wall-chat.css -w"
   },
   "author": "emarekica",
   "license": "ISC",
