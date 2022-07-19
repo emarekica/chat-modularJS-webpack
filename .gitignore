@@ -3,6 +3,7 @@
 
 sem-webpack.code-workspace
 
+dist/
 node_modules/
 temporary/
 webpack/
