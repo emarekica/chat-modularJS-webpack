@@ -3,7 +3,8 @@ import { getRandomName } from "../helpers/randomName.js";
 
 //
 
-const clientID = process.env.CLIENT_ID;
+// const clientID = process.env.CLIENT_ID;
+const clientID = "M4trM8H1WVeEhszi";
 
 const drone = new ScaleDrone(clientID, {
   data: {
@@ -12,4 +13,4 @@ const drone = new ScaleDrone(clientID, {
   },
 });
 
-export default drone;
+export { drone, clientID };

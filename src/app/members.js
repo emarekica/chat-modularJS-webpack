@@ -1,6 +1,7 @@
-import DOM from "./domEnum.js";
+// update who's online
 
-// ------------ UPDATE WHO'S ONLINE
+import DOM from "./domEnum.js";
+import { members } from "../index.js";
 
 function updateMembersDOM() {
   DOM.MEMBERS.innerHTML = `${members.length} artists at the wall: ${members

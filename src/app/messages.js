@@ -1,5 +1,6 @@
-import { updateMembersDOM } from "./members.js";
-import drone from "../helpers/client.js";
+import { msgSeparator } from "../helpers/msgSeparator.js";
+import { drone } from "../helpers/client.js";
+import { msgDateTime } from "./dateTime.js";
 
 import DOM from "./domEnum.js";
 
@@ -9,29 +10,10 @@ export const input = DOM.INPUT;
 
 // ------------ FUNCTIONS
 
-function sendMessage() {
-  const value = DOM.INPUT.value;
-  // console.log(value);
-
-  if (value === "") {
-    return;
-  }
-
-  DOM.INPUT.value = "";
-  drone.publish({
-    room: "observable-room",
-    message: value,
-  });
-}
-
 function createMessageElement(text, member) {
   // --- Separate messages from other users and "me"
-  const clientID = drone.clientId;
-  const messageFromMe = member.id === clientID;
-
   // Check if the messages are from "me"
-  const className = messageFromMe ? "message currentMember" : "message";
-  const { name, color } = member.clientData;
+  msgSeparator(member);
 
   // --- Creats and add msg to DOM
   const msg = document.createElement("div");
@@ -46,17 +28,12 @@ function createMessageElement(text, member) {
   character.appendChild(document.createTextNode(name));
   character.style.color = color;
   character.className = "name";
+  const { name, color } = member.clientData;
 
   profile.appendChild(character);
 
   // ---Add date & time to the msg
-  const now = new Date();
-  const time = `${now.getHours()}:${now.getMinutes()}`.padStart(2, "0");
-  const date = new Intl.DateTimeFormat(navigator.language).format(now);
-  const msgDateTime = document.createElement("div");
-
-  msgDateTime.textContent = `${date}, ${time}`;
-  msgDateTime.classList.add("time-date");
+  msgDateTime;
 
   //Combine user profile and msg into one element based on whether the message is from you or other user
   const element = document.createElement("div");
@@ -65,7 +42,23 @@ function createMessageElement(text, member) {
   element.className = className; // check
   element.append(msgDateTime);
 
+  console.log(element);
   return element;
+}
+
+function sendMessage() {
+  const value = DOM.INPUT.value;
+  // console.log(value);
+
+  if (value === "") {
+    return;
+  }
+
+  DOM.INPUT.value = "";
+  drone.publish({
+    room: "observable-room",
+    message: value,
+  });
 }
 
 // add msg to chat window
@@ -83,7 +76,7 @@ function addMessageToListDOM(text, member) {
 
 // ------------ EVENT LISTENERS
 
-export const msgHandlers = function () {
+const msgHandlers = function () {
   // Sending messages
   DOM.FORM.addEventListener("submit", sendMessage);
 
@@ -96,8 +89,6 @@ export const msgHandlers = function () {
   });
 };
 
-updateMembersDOM();
-
 //
 
-export { addMessageToListDOM };
+export { addMessageToListDOM, sendMessage, createMessageElement };

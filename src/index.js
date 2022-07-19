@@ -1,11 +1,15 @@
-import drone from "./helpers/client.js";
+import { drone } from "./helpers/client.js";
 import { errorHandler } from "./app/errorHandler.js";
 import { updateMembersDOM } from "./app/members.js";
-import { addMessageToListDOM } from "./app/messages.js";
+import {
+  addMessageToListDOM,
+  sendMessage,
+  createMessageElement,
+} from "./app/messages.js";
 
 //
 
-let members = [];
+export let members = [];
 
 // ------------ event listeners
 
@@ -56,6 +60,9 @@ drone.on("open", (error) => {
     }
   });
 });
+
+createMessageElement();
+sendMessage();
 
 // --- CLOSE CONNECTION
 
