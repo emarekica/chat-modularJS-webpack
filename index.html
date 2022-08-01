@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="css/wall-chat.css" />
+    <!-- <link rel="stylesheet" href="css/wall-chat.css" /> -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,6 +17,16 @@
       href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
       rel="stylesheet"
     />
+
+    <!-- SCRIPTS -->
+    <script defer type="modules" src="./src/helpers/randomName.js"></script>
+    <script defer type="modules" src="./src/helpers/randomColor.js"></script>
+    <script defer type="modules" src="./src/helpers/drone.js"></script>
+    <script defer type="modules" src="./src/helpers/dom.js"></script>
+    <script defer type="modules" src="./src/modules/members.js"></script>
+    <script defer type="modules" src="./src/modules/messages.js"></script>
+    <script defer type="modules" src="./src/modules/button.js"></script>
+    <script defer type="modules" src="./src/modules/index.js"></script>
 
     <title>Wall writings</title>
   </head>
@@ -52,18 +62,6 @@
 
     <!-- modal for error messages, for exceeding character number -->
     <div class="modal-error"></div>
-
-    <!-- <script type="module" src="src/helpers/randomName.js"></script>
-    <script type="module" src="src/helpers/randomColor.js"></script>
-    <script type="module" src="src/helpers/client.js"></script>
-    <script type="module" src="src/helpers/msgSeparator.js"></script>
-    <script type="module" src="src/app/domEnum.js"></script>
-    <script type="module" src="src/app/errorHandler.js"></script>
-    <script type="module" src="src/app/dateTime.js"></script>
-    <script type="module" src="src/app/members.js"></script>
-    <script type="module" src="src/app/messages.js"></script>
-    <script type="module" src="src/index.js"></script> -->
-    <script type="module" src="dist/main.js"></script>
 
     <!-- <script src="temporary/webpack/wall-chat.js"></script> -->
   </body>
