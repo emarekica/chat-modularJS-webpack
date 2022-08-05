@@ -19,6 +19,7 @@ This is the final project for the forementioned educational program.
 - "vanilla" JavaScript
 - [Scaledrone](https://www.scaledrone.com/)
 - JavaScript Modules
+- Webpack
 
 <br><br>
 
