@@ -1,9 +1,9 @@
 .DS_Store
 .env
 
-sem-webpack.code-workspace
-
 dist/
 node_modules/
 temporary/
 webpack/
+
+sem-webpack.code-workspace
