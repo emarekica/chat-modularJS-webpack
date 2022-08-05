@@ -9,8 +9,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- <link rel="stylesheet" href="css/wall-chat.css" /> -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,51 +16,47 @@
       rel="stylesheet"
     />
 
-    <!-- SCRIPTS -->
-    <script defer type="modules" src="./src/helpers/randomName.js"></script>
-    <script defer type="modules" src="./src/helpers/randomColor.js"></script>
-    <script defer type="modules" src="./src/helpers/drone.js"></script>
-    <script defer type="modules" src="./src/helpers/dom.js"></script>
-    <script defer type="modules" src="./src/modules/members.js"></script>
-    <script defer type="modules" src="./src/modules/messages.js"></script>
-    <script defer type="modules" src="./src/modules/button.js"></script>
-    <script defer type="modules" src="./src/modules/index.js"></script>
+    <link rel="stylesheet" href="./src/styles/chat.css" />
 
-    <title>Wall writings</title>
+    <script defer type="module" src="./src/index.js"></script>
+    <script defer type="module" src="src/helpers/randomName.js"></script>
+    <script defer type="module" src="src/helpers/randomColor.js"></script>
+    <script defer type="module" src="src/helpers/drone.js"></script>
+    <script defer type="module" src="src/helpers/dom.js"></script>
+    <script defer type="module" src="src/modules/members.js"></script>
+    <script defer type="module" src="src/modules/messages.js"></script>
+    <script defer type="module" src="src/modules/button.js"></script>
+
+    <!-- scripts -->
+
+    <title>Modular wall writings</title>
   </head>
 
   <body>
+    <!-- <script
+      src="https://cdn.scaledrone.com/scaledrone.min.js"
+      type="text/javascript"
+    ></script> -->
+
     <h1 class="heading">Wall writings</h1>
 
-    <div class="members"></div>
+    <div class="members-count"></div>
+    <div class="members-list"></div>
     <div class="messages"></div>
-
-    <form class="messageForm" onsubmit="return false;">
+    <form class="message-form" onsubmit="return false;">
       <input
-        class="messageFormInput"
-        id="input-field"
-        placeholder="Write something..."
+        class="message-form__input"
+        placeholder="Type a message.."
         type="text"
-        maxlength="500"
       />
-
-      <button
-        class="messageFormButton"
-        id="sendButton"
-        type="submit"
-        value="send"
-      >
-        <img
-          src="visuals/brushstroke.png"
-          alt="White wall with wide gray brush strokes"
-          id="brushStroke"
-        />
+      <button class="message-form__button" type="submit">
+        <img src="./src/visuals/brushstroke.png" id="brushstroke" />
       </button>
     </form>
 
     <!-- modal for error messages, for exceeding character number -->
     <div class="modal-error"></div>
 
-    <!-- <script src="temporary/webpack/wall-chat.js"></script> -->
+    <script type="module" src="src/index.js"></script>
   </body>
 </html>

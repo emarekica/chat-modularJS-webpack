@@ -1,10 +1,6 @@
 @import "components/variables";
 @import "components/mixins";
 
-@import "~bootstrap/scss/bootstrap";
-
-/* ----------------------------- */
-
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -175,7 +171,7 @@ h1 {
   color: $font-color;
 }
 
-.members,
+.members-list,
 .messages {
   border: none;
   padding: 15px;
@@ -199,7 +195,7 @@ h1 {
   height: 60vh;
   overflow: auto;
 
-  background: url(/visuals/messages-bckg.png);
+  background: url("../visuals/messages-bckg.png");
   background-size: cover;
   background-position: top;
 }
@@ -225,7 +221,7 @@ h1 {
   font-size: 0.85em;
 }
 
-.members {
+.members-list {
   line-height: 1.3em;
 }
 .name,
@@ -240,12 +236,12 @@ span {
   padding-right: 2em;
 }
 
-.messageForm {
+.message-form {
   display: flex;
   word-wrap: break-word;
 }
 
-.messageFormInput {
+.message-form__input {
   flex-grow: 1;
   border: none;
   padding: 10px 15px;
@@ -257,7 +253,7 @@ span {
   background-color: $background-color;
 }
 
-.messageFormInput:focus {
+.message-form__input {
   background-color: $background-color;
 
   /* removes the border */
@@ -270,7 +266,7 @@ span {
   overflow-wrap: break-word;
 }
 
-.messageFormButton {
+.message-form__button {
   margin: auto;
   border: none;
 
