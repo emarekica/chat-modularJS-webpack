@@ -1,0 +1,27 @@
+{
+  "name": "chat-modularjs-webpack",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chat with Scaledrone, Modular JS and Webpack",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emarekica/chat-modularJS-webpack.git"
+  },
+  "author": "Marija Ercegovac",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emarekica/chat-modularJS-webpack/issues"
+  },
+  "homepage": "https://github.com/emarekica/chat-modularJS-webpack#readme",
+  "dependencies": {
+    "node-modules": "^1.0.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
