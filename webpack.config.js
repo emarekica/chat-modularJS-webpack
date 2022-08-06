@@ -10,4 +10,17 @@ module.exports = {
     // "dist" is a folder the code goes in
     path: path.resolve(__dirname, "dist"),
   },
+
+  module: {
+    rules: [
+      {
+        test: /\.scss$/,
+        use: [
+          "style-loader", // 3. injects styles into DOM
+          "css-loader", // 2: turns CSS into JS
+          "sass-loader", // 1: turns SCSS/SASS into CSS
+        ],
+      },
+    ],
+  },
 };
