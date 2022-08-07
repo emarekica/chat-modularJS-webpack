@@ -1,5 +1,5 @@
-@import "./styles/components/variables";
-@import "./styles/components/mixins";
+@import "components/variables";
+@import "components/mixins";
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -153,7 +153,7 @@ body {
   margin: 0;
   padding: 2em;
 
-  background-image: $linear-gradient, url("./visuals/wallpaper.png");
+  background-image: $linear-gradient, url("../visuals/wallpaper.png");
   background-size: 100%;
   background-repeat: initial;
 }
@@ -195,7 +195,7 @@ h1 {
   height: 60vh;
   overflow: auto;
 
-  background: url("./visuals/messages-bckg.png");
+  background: url("../visuals/messages-bckg.png");
   background-size: cover;
   background-position: top;
 }

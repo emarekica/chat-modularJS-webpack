@@ -5,8 +5,6 @@ import { updateMembersDOM, members } from "./modules/members.js";
 import { addMessageToListDOM } from "./modules/messages.js";
 import { sendMessage } from "./modules/button.js";
 
-import "./chat.scss";
-
 //
 
 export const modalError = document.querySelector(".modal-error");

@@ -21,6 +21,7 @@ function createMessageElement(text, member) {
   const msgDateTime = document.createElement("div");
   msgDateTime.textContent = `${date}, ${time}`;
   msgDateTime.classList.add("time-date");
+  console.log(msgDateTime);
 
   el.appendChild(createMemberElement(member));
   el.appendChild(document.createTextNode(text));
