@@ -14,12 +14,12 @@ This is the final project for the forementioned educational program.
 
 <br>
 
-- HTML
-- CSS
+- HTML5
+- SCSS
 - "vanilla" JavaScript
 - [Scaledrone](https://www.scaledrone.com/)
-- JavaScript Modules
-- Webpack
+- ES6 Modules
+- Webpack4
 
 <br><br>
 
@@ -54,8 +54,8 @@ This is the final project for the forementioned educational program.
 - [x] add date & time with every message sent
 - [x] add small modal window with alert when character limit reached
 - [x] add SCSS
-- [x] add JavaScript Modules
-- [ ] make version with Webpack
+- [x] add ES6 Modules
+- [x] make version with Webpack
 
 <br><br>
 
