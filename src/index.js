@@ -6,8 +6,12 @@ import { addMessageToListDOM } from "./modules/messages.js";
 import { sendMessage } from "./modules/button.js";
 
 import "./chat.scss";
+import buttonCircle from "./visuals/brushstroke.png";
 
 //
+
+const button = document.getElementById("brushstroke");
+button.src = buttonCircle;
 
 export const modalError = document.querySelector(".modal-error");
 

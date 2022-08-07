@@ -10,6 +10,9 @@ module.exports = {
     path: path.resolve(__dirname, "dist/"),
     filename: "[name].[contenthash].js",
     clean: true,
+
+    // Asset Resource loader
+    assetModuleFilename: "[name][ext]",
   },
 
   devtool: "source-map",
@@ -44,6 +47,16 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: ["style-loader", "css-loader", "sass-loader"],
+      },
+
+      // assets resource loader
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: "asset/resource",
       },
     ],
   },
