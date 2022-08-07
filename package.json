@@ -4,7 +4,7 @@
   "description": "Chat with Scaledrone, SCSS and Webpack",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/emarekica/chat-modularJS-webpack/issues"
   },
-  "homepage": "https://github.com/emarekica/chat-modularJS-webpack#readme"
+  "homepage": "https://github.com/emarekica/chat-modularJS-webpack#readme",
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
 }
