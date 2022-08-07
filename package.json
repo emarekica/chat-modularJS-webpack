@@ -4,7 +4,7 @@
   "description": "Chat with Scaledrone, SCSS and Webpack",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
