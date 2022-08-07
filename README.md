@@ -95,6 +95,8 @@ const CLIENT_ID = "M5tfM9H0WVkEzsTi";
 
 ## Try it
 
+[Start the chat!](https://emarekica.github.io/chat-modularJS-webpack/)
+
 <br>
 
 Open the chat in two or more different windows/tabs.
