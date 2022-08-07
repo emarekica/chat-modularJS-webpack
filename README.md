@@ -86,7 +86,7 @@ const CLIENT_ID = "M5tfM9H0WVkEzsTi";
 
 <br><br>
 
-![mockups](visuals/wall-chat-mockups.png)
+![mockups](./src/visuals/wall-chat-mockups.png)
 <br><br>
 
 ---
@@ -99,7 +99,7 @@ const CLIENT_ID = "M5tfM9H0WVkEzsTi";
 
 Open the chat in two or more different windows/tabs.
 
-[GitHub Pages](https://github.com/emarekica/seminarski-algebra/settings/pages)
+[GitHub Pages](https://emarekica.github.io/seminarski-algebra/)
 
 ---
 
