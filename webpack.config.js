@@ -28,6 +28,18 @@ module.exports = {
 
   module: {
     rules: [
+      // babel
+      {
+        test: /\.js$/,
+        exclude: /node_modules/, // excludes node_modules from test
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+          },
+        },
+      },
+
       // loaders
       {
         test: /\.s[ac]ss$/i,
