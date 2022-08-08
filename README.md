@@ -102,7 +102,7 @@ const CLIENT_ID = "9094oijOPIJD3jp8F9";
 
 Open the chat in two or more different windows/tabs.
 
-[Start the chat!](https://chat-scaledrone-webpack.netlify.app)
+[Start the chat!](https://chat-scaledrone-webpack.netlify.app). |  [See the design on Behance](https://www.behance.net/gallery/149945873/Wall-Writings-Chat)
 
 ---
 
