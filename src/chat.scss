@@ -206,10 +206,14 @@ h1 {
 
 .message .member {
   display: inline-block;
+  margin: 1em 0;
+  font-size: 1em;
 }
 
 .message {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  
   float: left;
   clear: both;
   position: relative;
@@ -352,7 +356,7 @@ span {
 .time-date {
   margin-top: 1em;
 
-  font-size: 0.8em;
+  font-size: 0.5em;
   text-align: end;
 }
 
