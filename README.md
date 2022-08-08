@@ -20,7 +20,7 @@ This version is upgraded with ES6 Modules, SCSS and Babel, bundled with Webpack5
 
 - HTML5
 - SCSS
-- "vanilla" JavaScript
+- JavaScript
 - [Scaledrone](https://www.scaledrone.com/)
 - ES6 Modules
 - Babel
