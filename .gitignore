@@ -4,4 +4,7 @@
 node_modules/
 dist/
 
+package-lock.json
+package.json
+
 chat-modularJS-webpack.code-workspace
